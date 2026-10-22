@@ -1,0 +1,1 @@
+{"cmd":"solve","spot":{"board":"Ks7d2c5h9s","pot":10,"stack":50,"oop":"AA,KK,AK,KQ,JT","ip":"AA,AK,KQ,QQ,T9","bets":[50,100],"raise":3,"raises":1,"allIn":true},"target":0.3,"maxIterations":500,"threads":2}

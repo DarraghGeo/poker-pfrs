@@ -1,0 +1,19 @@
+[package]
+name = "pfrs"
+version = "0.1.0"
+edition = "2021"
+description = "A JSON-lines solve server around b-inary/postflop-solver, for use as a separate program"
+license = "AGPL-3.0-or-later"
+repository = "https://github.com/DarraghGeo/poker-pfrs"
+publish = false
+
+[dependencies]
+# An unmodified copy of b-inary/postflop-solver at commit 9d1509f (see postflop-solver/).
+postflop-solver = { path = "postflop-solver", default-features = false, features = ["rayon"] }
+rayon = "1.8"
+serde_json = "1"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1

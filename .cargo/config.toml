@@ -1,0 +1,5 @@
+# postflop-solver 9d1509f predates the `dangerous_implicit_autorefs` lint, which newer Rust
+# compilers deny by default. Allowing it changes no code; it only lets the unmodified source build.
+# No `target-cpu=native`: the binary is built on one machine (CI) and run on another.
+[build]
+rustflags = ["-A", "dangerous_implicit_autorefs"]
